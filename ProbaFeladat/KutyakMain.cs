@@ -33,6 +33,9 @@ namespace ProbaFeladat
                 Console.ReadLine();
                 feladatok.HetedikFeladat(kutyak, kutyaFajtak, kutyaNevek);
                 Console.ReadLine();
+                string keresettDatum = "2018.01.10";
+                feladatok.NyolcadikFeladat(kutyak, kutyaFajtak, keresettDatum);
+                Console.ReadLine();
 
                 
                 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,6 +63,49 @@ namespace ProbaFeladat
             }
 
             Console.WriteLine("7. feladat: Legidősebb kutya neve és fajtája: "+ kutyaNeve +", "+ kutyaFajtaja);
+        }
+
+        public void NyolcadikFeladat(List<Kutya> kutyak, List<KutyaFajta> kutyaFajtak, string keresettDatum)
+        {
+            Dictionary<String, int> kezeltKutyak = new Dictionary<String, int>();
+
+            string format = "yyyy.MM.dd";
+            DateOnly nap = DateOnly.ParseExact(keresettDatum, format, CultureInfo.InvariantCulture);
+
+            foreach (Kutya item in kutyak)
+            {
+                foreach (KutyaFajta item2 in kutyaFajtak)
+                {
+                    if (item.EllenorzesDatuma.Equals(nap) && item.FajtaId == item2.FajtaId)
+                    {
+                        kezeltKutyak.Add(item2.FajtaNev, 0);
+                    }
+                }
+                
+            }
+
+            foreach(Kutya item in kutyak)
+            {
+                foreach (var item1 in kezeltKutyak)
+                {
+                    foreach (KutyaFajta item2 in kutyaFajtak)
+                    {
+                        if(item.EllenorzesDatuma.Equals(nap) && item.FajtaId == item2.FajtaId)
+                        {
+                            if(item2.FajtaNev == item1.Key)
+                            {
+                                kezeltKutyak[item2.FajtaNev] = (item1.Value + 1);
+                            }
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("8. feladat: Január 10-én viszgált kutyafajták:\n");
+            foreach (var item in kezeltKutyak)
+            {
+                Console.WriteLine(item.Key+", "+item.Value+" kutya\n");
+            }
+
         }
     }
 }
