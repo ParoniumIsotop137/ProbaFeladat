@@ -1,0 +1,15 @@
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\bin\Debug\net6.0\ProbaFeladat.exe
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\bin\Debug\net6.0\ProbaFeladat.deps.json
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\bin\Debug\net6.0\ProbaFeladat.runtimeconfig.json
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\bin\Debug\net6.0\ProbaFeladat.dll
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\bin\Debug\net6.0\ProbaFeladat.pdb
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\obj\Debug\net6.0\ProbaFeladat.csproj.AssemblyReference.cache
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\obj\Debug\net6.0\ProbaFeladat.GeneratedMSBuildEditorConfig.editorconfig
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\obj\Debug\net6.0\ProbaFeladat.AssemblyInfoInputs.cache
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\obj\Debug\net6.0\ProbaFeladat.AssemblyInfo.cs
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\obj\Debug\net6.0\ProbaFeladat.csproj.CoreCompileInputs.cache
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\obj\Debug\net6.0\ProbaFeladat.dll
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\obj\Debug\net6.0\refint\ProbaFeladat.dll
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\obj\Debug\net6.0\ProbaFeladat.pdb
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\obj\Debug\net6.0\ProbaFeladat.genruntimeconfig.cache
+B:\VsSprojects\ProbaFeladat\ProbaFeladat\obj\Debug\net6.0\ref\ProbaFeladat.dll
