@@ -31,6 +31,8 @@ namespace ProbaFeladat
                 Console.ReadLine();
                 feladatok.HatodikFeladat(kutyak);
                 Console.ReadLine();
+                feladatok.HetedikFeladat(kutyak, kutyaFajtak, kutyaNevek);
+                Console.ReadLine();
 
                 
                 
