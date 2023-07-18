@@ -101,5 +101,23 @@ namespace ProbaFeladat
 
             return nevek;
         }
+
+        public void NevListaFajlbaIrasa(Dictionary<string, int> nevek, string fajlnev)
+        {
+
+            var rendezve = nevek.OrderByDescending(x => x.Value).ToDictionary(x=> x.Key, x=> x.Value);
+
+            StreamWriter writer = new StreamWriter(fajlnev, false);
+
+            foreach (var item in rendezve)
+            {
+                String text = item.Key + ";" + item.Value;
+                writer.WriteLine(text);
+            }
+            writer.Close();
+            Console.WriteLine("10. feladat: nevstatisztika.txt");
+
+
+        }
     }
 }

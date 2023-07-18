@@ -141,6 +141,41 @@ namespace ProbaFeladat
 
         }
 
+        public void TizedikFeladat(List<KutyaNev> kutyaNevek, List<Kutya> kutyak)
+        {
+            Dictionary<string, int> nevek = new Dictionary<String, int>();
+            Fajlbeolvasas fajl = new Fajlbeolvasas();
 
+            foreach (KutyaNev nev in kutyaNevek)
+            {
+                if (!nevek.ContainsKey(nev.KutyaNeve))
+                {
+                    nevek.Add(nev.KutyaNeve, 0);
+                }
+            }
+
+            foreach(Kutya kutya in kutyak)
+            {
+                foreach (KutyaNev nev in kutyaNevek)
+                {
+                    foreach (var item in nevek)
+                    {
+                        if(kutya.NevId == nev.KutyaId)
+                        {
+                            if(nev.KutyaNeve == item.Key)
+                            {
+                                nevek[nev.KutyaNeve] = (item.Value + 1);
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+            fajl.NevListaFajlbaIrasa(nevek, "B:\\Kurs\\Feladatok\\Kutyak\\nevstatisztika2.txt");
+
+
+
+        }
     }
 }
