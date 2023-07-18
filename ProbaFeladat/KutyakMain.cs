@@ -36,9 +36,11 @@ namespace ProbaFeladat
                 string keresettDatum = "2018.01.10";
                 feladatok.NyolcadikFeladat(kutyak, kutyaFajtak, keresettDatum);
                 Console.ReadLine();
+                feladatok.KilencedikFeladat(kutyak);
+                Console.ReadLine();
 
-                
-                
+
+
 
         }
         }

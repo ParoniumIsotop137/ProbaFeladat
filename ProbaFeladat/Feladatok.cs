@@ -107,5 +107,40 @@ namespace ProbaFeladat
             }
 
         }
+
+        public void KilencedikFeladat(List<Kutya> kutyak)
+        {
+            Dictionary<DateOnly, int> datumok = new Dictionary<DateOnly, int>();
+
+            foreach (Kutya kutya in kutyak)
+            {
+                if (!datumok.ContainsKey(kutya.EllenorzesDatuma))
+                {
+                    datumok.Add(kutya.EllenorzesDatuma, 0);
+                }
+
+               
+            }
+
+            foreach (Kutya kutya in kutyak)
+            {
+                foreach (var item in datumok)
+                {
+                    if(kutya.EllenorzesDatuma.Equals(item.Key))
+                    {
+                        datumok[item.Key] = (item.Value + 1);
+                    }
+                }
+            }
+
+           var kutyakSzama = datumok.Max(x => x.Value);
+           var keresettDatum = datumok.MaxBy(y=> y.Value).Key;
+
+           Console.WriteLine("9. feladat: A legjobban leterhelt nap: "+keresettDatum+": "+kutyakSzama+" kutya");
+
+
+        }
+
+
     }
 }
